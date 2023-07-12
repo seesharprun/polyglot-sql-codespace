@@ -1,6 +1,6 @@
 services:
   core:
-    image: mcr.microsoft.com/devcontainers/dotnet:7.0-focal
+    image: mcr.microsoft.com/devcontainers/dotnet:7.0-jammy
     command: sleep infinity
     volumes:
       - ..:/workspace:cached
