@@ -1,6 +1,6 @@
 services:
   core:
-    image: mcr.microsoft.com/devcontainers/universal:focal
+    image: ubuntu:20.04
     command: sleep infinity
     volumes:
       - ..:/workspace:cached

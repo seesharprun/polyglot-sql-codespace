@@ -3,15 +3,11 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "core",
 	"workspaceFolder": "/workspace",
-	"hostRequirements": {
-		"cpus": 4
-	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"ms-mssql.mssql",
-				"ms-dotnettools.dotnet-interactive-vscode",
-				"ms-toolsai.jupyter"
+				"ms-dotnettools.dotnet-interactive-vscode"
 			],
 			"settings": {
 				"mssql.enableSqlAuthenticationProvider": false,
