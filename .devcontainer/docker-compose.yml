@@ -1,0 +1,13 @@
+services:
+  core:
+    image: mcr.microsoft.com/devcontainers/universal:focal
+    command: sleep infinity
+    volumes:
+      - ..:/workspace:cached
+    depends_on:
+      - sql
+  sql:
+    build:
+      context: .
+    ports:
+      - 1433:1433

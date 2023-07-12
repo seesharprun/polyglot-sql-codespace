@@ -1,0 +1,45 @@
+{
+	"name": "SQL environment",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "core",
+	"workspaceFolder": "/workspace",
+	"hostRequirements": {
+		"cpus": 4
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-mssql.mssql",
+				"ms-dotnettools.dotnet-interactive-vscode",
+				"ms-toolsai.jupyter"
+			],
+			"settings": {
+				"mssql.enableSqlAuthenticationProvider": false,
+				"mssql.format.keywordCasing": "uppercase",
+				"mssql.format.datatypeCasing": "lowercase",
+				"mssql.format.placeSelectStatementReferencesOnNewLine": true,
+				"mssql.connections": [
+					{
+						"server": "sql",
+						"database": "TicketDB",
+						"authenticationType": "SqlLogin",
+						"user": "SA",
+						"password": "P@ssw.rd",
+						"emptyPasswordInput": false,
+						"savePassword": true,
+						"profileName": "Sidecar",
+						"encrypt": "Mandatory",
+						"trustServerCertificate": true,
+						"applicationName": "vscode"
+					}
+				]
+			}
+		},
+		"codespaces": {
+			"openFiles": [
+				"readme.md",
+				"dotnet-interactive-notebook.ipynb"
+			]
+		}
+	}
+}
